@@ -1,2 +1,3 @@
-0	SCHOOL This is a School file
+#!/bin/bash
+0	SCHOOL School
 !:mime School
