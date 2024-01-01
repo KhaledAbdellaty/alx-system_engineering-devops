@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-chmod 600 ~/.ssh/shcool
+# Connecting the server using the private key.
+
 ssh -i ~/.ssh/school ubuntu@18.204.13.102
