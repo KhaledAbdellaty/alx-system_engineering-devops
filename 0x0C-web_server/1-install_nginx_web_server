@@ -5,9 +5,11 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 
+# Change owner for nginx root directory
+sudo chown -R $USER:$USER /var/www/
+
 # write 'Hello World!' in the root html file
-#sudo echo 'Hello World!' > /var/www/html/index.nginx-debian.html
-sudo bash -c "echo 'Hello World!' > /var/www/html/index.html"
+sudo echo 'Hello World!' > /var/www/html/index.html
 
 # check error syntax
 sudo nginx -t
