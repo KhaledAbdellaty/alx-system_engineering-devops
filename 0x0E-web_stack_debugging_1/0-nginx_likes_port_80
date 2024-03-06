@@ -2,5 +2,5 @@
 # Nginx installation from listening on port 80.
 
 rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-availabe/default /etc/nginx/sites-enables/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enables/default
 sudo service nginx restart
