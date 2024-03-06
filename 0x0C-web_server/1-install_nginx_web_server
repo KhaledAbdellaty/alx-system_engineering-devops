@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# A script that will install Nginx web server
+# and do some configurations
+
+sudo apt-get update
+sudo apt-get install Nginx -y
+
+# write 'Hello World!' in the root html file
+echo 'Hello World!' > /var/www/html/index.html
+
+# check error syntax
+sudo nginx -t
+
+# restart the Nginx web server
+sudo service nginx restart
