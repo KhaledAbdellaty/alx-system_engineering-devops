@@ -6,7 +6,8 @@ sudo apt-get -y update
 sudo apt-get -y install nginx
 
 # write 'Hello World!' in the root html file
-sudo echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+#sudo echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+sudo bash -c "echo 'Hello World!' > /var/www/html/index.html"
 
 # check error syntax
 sudo nginx -t
