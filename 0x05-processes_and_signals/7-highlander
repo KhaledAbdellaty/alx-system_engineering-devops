@@ -2,6 +2,7 @@
 # Bash script that displays To infinity and beyond indefinitely.
 # Dsipalys "I am invincible!!!" when receiving SIGTERM signal.
 
+while true
 do
 	echo "To infinity and beyond"
 	sleep 2
