@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # install and configure HAproxy load balancer
 
-sudo apt-get update
-sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-2.8
-sudo apt-get install haproxy -y
+apt-get update
+apt-get install --no-install-recommends software-properties-common
+add-apt-repository ppa:vbernat/haproxy-2.8
+apt-get install haproxy -y
 
-sudo echo "ENABLED=1" >> /etc/default/haproxy
+echo "ENABLED=1" >> /etc/default/haproxy
 
-sudo echo "
+echo "
 	listen load_balancer
 	bind *:80
 	mode http
