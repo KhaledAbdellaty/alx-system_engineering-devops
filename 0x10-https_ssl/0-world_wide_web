@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# A Bash script that display information about domain.
+
+get_record_info()  {
+	dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v s2="$2" '{print "The subdomain " s2 " is a " $4 " record and points to "$5}'
+}
+
+if [[ $# -lt 1 ]]; then
+	echo "Usage: $0 domain [subdomain]"
+elif [[ $# -eq "2"  ]]; then
+	get_record_info "$1" "$2"
+else
+	subdomains=("www" "lb-01" "web-01" "web-02")
+	for subdomain in "${subdomains[@]}"; do
+		get_record_info "$1" "$subdomain"
+	done
+fi
