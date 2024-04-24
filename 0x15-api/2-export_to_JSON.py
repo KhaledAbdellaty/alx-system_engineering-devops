@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Script that list To-do information for a employee Id."""
+import json
 import requests
 import sys
-import json
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
